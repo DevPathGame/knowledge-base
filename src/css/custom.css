@@ -5,26 +5,131 @@
  */
 
 /* You can override the default Infima variables here. */
-:root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+@font-face {
+  font-family: 'Public Pixel';
+  src: url('/fonts/PublicPixel-rv0pA.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Satoshi';
+  src: url('/fonts/Satoshi-Variable.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
-[data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+/* Modo Claro - Estilo Pac-Man */
+:root {
+  --ifm-font-family-base: 'Press Start 2P', monospace; /* Fuente global */
+  --ifm-code-font-size: 90%; /* Reduce un poco el tamaño del código */
+
+  /* Colores retro */
+  --ifm-color-primary: #ec5f5f; /* Amarillo brillante */
+  --ifm-color-primary-dark: #ff0000;
+  --ifm-color-primary-darker: #ffffff;
+  --ifm-color-primary-darkest: #ff0000;
+  --ifm-color-primary-light: #222222;
+  --ifm-color-primary-lighter: #df9d80;
+  --ifm-color-primary-lightest: #a5740b;
+
+  /* Fondo retro */
+  --ifm-background-color: #f3eae8; /* Fondo oscuro retro */
+  --ifm-background-secondary-color: rgb(178, 178, 178); /* Fondo secundario más oscuro */
+  --ifm-color-gray-100: #ffffff; /* Texto claro */
+
+  /* Colores para el código */
+  --docusaurus-highlighted-code-line-bg: #ffffff; /* Amarillo retro para líneas resaltadas */
+  --docusaurus-code-block-background: #000000; /* Fondo negro puro para bloques de código */
 }
+
+/* Para el modo oscuro */
+[data-theme='dark'] {
+  --ifm-color-primary: #00ffcc; /* Verde-azulado brillante */
+  --ifm-color-primary-dark: #00e6b3;
+  --ifm-color-primary-darker: #00b38a;
+  --ifm-color-primary-darkest: #009973;
+  --ifm-color-primary-light: #33ffd6;
+  --ifm-color-primary-lighter: #66ffe6;
+  --ifm-color-primary-lightest: #99fff2;
+
+  --ifm-background-color: #1a1a1a; /* Fondo muy oscuro */
+  --ifm-background-secondary-color: #0d0d0d; /* Fondo secundario */
+  --ifm-color-gray-100: #f0f0f0; /* Texto en modo oscuro */
+  
+  --docusaurus-highlighted-code-line-bg: rgba(0, 255, 204, 0.2); /* Verde-azulado para código resaltado */
+  --docusaurus-code-block-background: #000000; /* Fondo negro puro para bloques de código */
+}
+
+/* Botones estilo retro */
+button, .button {
+  font-family: 'Public Pixel', monospace;
+  text-transform: uppercase;
+  border: 3px solid var(--ifm-color-primary);
+  background-color: var(--ifm-color-gray-100);
+  color: var(--ifm-color-primary);
+  padding: 10px 20px;
+  box-shadow: 3px 3px var(--ifm-color-primary-dark);
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover, .button:hover {
+  background-color: var(--ifm-color-primary-light);
+  color: var(--ifm-color-primary-lighter);
+  box-shadow: 6px 6px var(--ifm-color-primary-darker);
+}
+
+body {
+  font-family: 'Public Pixel', monospace;
+  border-radius: 0;
+  color: var(--ifm-color-primary-light);
+}
+
+h1, code {
+  font-family: 'Public Pixel', monospace;
+  border-radius: 0;
+  text-shadow: 2px 2px var(--ifm-color-primary-darkest);
+  color: var(--ifm-color-primary-light);
+}
+
+h2, h3, h4, h5, h6, p, blockquote, pre {
+  font-family: 'Satoshi', monospace;
+  border-radius: 0;
+  color: var(--ifm-color-primary-light);
+}
+
+/* Bloques de código estilo retro */
+pre, code {
+  font-family: 'Satoshi', monospace;
+  background-color: #000;
+  color: #00ffcc; /* Color verde-azulado brillante */
+  border: 3px solid var(--ifm-color-primary);
+  padding: 10px;
+  text-shadow: none;
+  box-shadow: 2px 2px var(--ifm-color-primary-darkest);
+}
+
+/* Estilo retro para enlaces */
+a {
+  color: var(--ifm-color-primary);
+  text-decoration: none;
+  border-bottom: 3px solid var(--ifm-color-primary-dark);
+}
+
+a:hover {
+  color: var(--ifm-color-primary-light);
+  border-bottom: 3px solid var(--ifm-color-primary-light);
+}
+
+/* Estilo retro para las tarjetas y secciones */
+.card, .section {
+  background-color: var(--ifm-background-secondary-color);
+  border: 3px solid var(--ifm-color-primary);
+  padding: 15px;
+  box-shadow: 4px 4px var(--ifm-color-primary-dark);
+}
+
+/* Otros elementos retro */
+hr {
+  border: 2px dashed var(--ifm-color-primary-dark);
+}
+
