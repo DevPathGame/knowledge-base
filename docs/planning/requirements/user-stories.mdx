@@ -1,0 +1,253 @@
+# User Stories
+
+## Section: Homepage
+
+### US[1]: Log in
+
+**As** an unregistered user,
+**I want** to have the option to log in to be able to test DevPath,
+**so that** I press any key and a login form opens.
+
+#### Acceptance Criteria:
+
+- **Given** that I am an unregistered user,
+- **When** I press any key,
+- **Then** a login form opens.
+
+#### Scenarios:
+
+- **Positive Scenario**:  
+  The login form displays correctly when any key is pressed, allowing the user to enter their credentials.
+
+- **Negative Scenario**:  
+  If there is a system error, the login form does not display, and an error message appears instead.
+
+<div
+  style={{
+    width: "70%",
+    margin: "auto",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  }}
+>
+  <p style={{ fontWeight: "bold", textAlign: "center" }}>Mockup</p>
+  ![](\img\mockups\Home.png)
+</div>
+
+## Section: Game Modes
+
+### US[2]: Play Single Player
+
+**As** an user,
+**I want** the system to show me a list of available game modes,
+**so that** I can play in single player mode.
+
+#### Acceptance Criteria:
+
+- **Given** that I am a logged-in user,
+- **When** I access the game mode selection screen,
+- **Then** I see a list of available game modes,
+- **And** the single-player mode is available for selection.
+
+#### Scenarios:
+
+- **Positive Scenario**:  
+  The system displays a list of game modes, including single-player, allowing the user to select and start a single-player game.
+
+- **Negative Scenario**:  
+  If there are no game modes available or the system encounters an error, the list does not display, and an error message is shown to the user.
+
+<div
+  style={{
+    width: "70%",
+    margin: "auto",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  }}
+>
+  <p style={{ fontWeight: "bold", textAlign: "center" }}>Mockup</p>
+  ![](\img\mockups\GameSelect.png)
+</div>
+
+## Section: Game
+
+### US[3]: See Score in Real Time
+
+**As** a player,  
+**I want** to see my score in real time as I play,  
+**so that** I can know how I am doing.
+
+#### Acceptance Criteria:
+
+- **Given** that I am an active player in a game session,
+- **When** I score points,
+- **Then** my current score is updated and displayed on the screen in real time.
+
+#### Scenarios:
+
+- **Positive Scenario**:  
+  The score updates immediately on the screen whenever I achieve points, allowing me to track my performance.
+
+- **Negative Scenario**:  
+  If there is a lag in the system, my score may not update until after a brief delay, potentially leading to confusion.
+
+---
+
+### US[4]: See Highest Score
+
+**As** a player,  
+**I want** to see my highest score achieved in a game session,  
+**so that** I can try to beat it.
+
+#### Acceptance Criteria:
+
+- **Given** that I have played previous game sessions,
+- **When** I access the score display,
+- **Then** my highest score is shown on the screen.
+
+#### Scenarios:
+
+- **Positive Scenario**:  
+  The highest score is displayed correctly, allowing me to know my best performance and motivating me to improve.
+
+- **Negative Scenario**:  
+  If there is an error retrieving my scores, the system displays a message indicating that the highest score cannot be retrieved.
+
+---
+
+### US[5]: See Available Skills
+
+**As** a player,  
+**I want** to see the skills I have available,  
+**so that** I can use them at the right moment.
+
+#### Acceptance Criteria:
+
+- **Given** that I am in a game session,
+- **When** I look for my available skills,
+- **Then** a list of my available skills is displayed on the screen.
+
+#### Scenarios:
+
+- **Positive Scenario**:  
+  The list of skills shows all my available abilities clearly, allowing me to strategize my gameplay effectively.
+
+- **Negative Scenario**:  
+  If there is an issue with loading my skills, an error message is displayed, and I cannot see my available skills.
+
+---
+
+### US[6]: Player Movement
+
+**As** a player,  
+**I want** to see my character on the screen and move it using the < ^v > keys,  
+**so that** I can dodge obstacles while advancing through the map.
+
+#### Acceptance Criteria:
+
+- **Given** that I am in a game session,
+- **When** I use the < ^v > keys,
+- **Then** my character moves accordingly on the screen to dodge obstacles.
+
+#### Scenarios:
+
+- **Positive Scenario**:  
+  My character moves smoothly in response to the < ^v > key presses, allowing me to effectively navigate through the obstacles.
+
+- **Negative Scenario**:  
+  If there is a delay in the key response, my character may not move as expected, leading to potential collisions with obstacles.
+
+<div
+  style={{
+    width: "70%",
+    margin: "auto",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  }}
+>
+  <p style={{ fontWeight: "bold", textAlign: "center" }}>Mockup</p>
+  ![](\img\mockups\Singleplayer.png)
+</div>
+
+## Section: Bosses and Questions
+
+### US[7]: Encounter Bosses
+
+**As** a player,  
+**I want** to encounter a boss that presents me with a random question,  
+**so that** I can earn a power-up and points for correct answers, or lose a life for incorrect answers.
+
+#### Acceptance Criteria:
+
+- **Given** that I am facing a boss,
+- **When** the encounter begins,
+- **Then** a random question appears on the screen from a pool of eligible topics,
+- **And** the question's difficulty adjusts based on my experience level.
+
+- **Given** that I see the question,
+- **When** I select an answer,
+- **Then** if I answer correctly, I receive a power-up and points,
+- **And** if I answer incorrectly, I lose a life.
+
+#### Scenarios:
+
+- **Positive Scenario**:  
+  The random question is displayed correctly, and I receive feedback on my answer. If correct, I see an animation for the power-up and points awarded. If incorrect, my life counter decreases appropriately.
+
+- **Negative Scenario**:  
+  If there is a system error and the question does not load, an error message is displayed, indicating that the boss encounter cannot proceed. If the answer processing fails, I receive no feedback, and my life count may not update correctly.
+
+<div
+  style={{
+    width: "70%",
+    margin: "auto",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  }}
+>
+  <p style={{ fontWeight: "bold", textAlign: "center" }}>Mockup</p>
+  ![](\img\mockups\QA.png)
+</div>
+
+## Section: Leaderboard
+
+### US[8]: View Leaderboard
+
+**As** a player,  
+**I want** to see a leaderboard of my best previous games after finishing a game,  
+**so that** I can track my performance and improvements over time.
+
+#### Acceptance Criteria:
+
+- **Given** that I have completed a game session in single-player mode,
+- **When** I finish the game,
+- **Then** a leaderboard displaying my previous best game scores is shown on the screen.
+
+- **Given** that the leaderboard is displayed,
+- **When** I view it,
+- **Then** I see a list of my top scores, including details such as the score, date, and duration of each game.
+
+#### Scenarios:
+
+- **Positive Scenario**:  
+  The leaderboard accurately displays my best game scores in descending order, allowing me to see my highest achievements and track progress.
+
+- **Negative Scenario**:  
+  If there is an error retrieving my game history, an error message is shown indicating that the leaderboard cannot be displayed, and no scores are listed.
+
+<div
+  style={{
+    width: "70%",
+    margin: "auto",
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  }}
+>
+  <p style={{ fontWeight: "bold", textAlign: "center" }}>Mockup</p>
+  ![](\img\mockups\Leaderboard.png)
+</div>

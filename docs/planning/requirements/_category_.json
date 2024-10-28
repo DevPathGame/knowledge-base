@@ -1,0 +1,8 @@
+{
+  "label": "Requirements register",
+  "position": 2,
+  "link": {
+    "type": "generated-index",
+    "description": "A detailed index of all requirements registered divided by type."
+  }
+}
